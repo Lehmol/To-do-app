@@ -1,0 +1,111 @@
+body{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(238,174,202);
+    background: -moz-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(83,141,210,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(83,141,210,1) 100%);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(83,141,210,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#538dd2",GradientType=1);
+}
+.inputCard {
+    background: hsla(0, 0%, 100%, 0.8);
+    height: 80px;
+    width: 400px;
+    display:flex;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+#taskInput {
+    border-style: none;
+    height:auto;
+    width: auto;
+    background: none;
+    font-size: 20px;
+}
+#taskInput:focus {
+    outline:none;
+}
+#addtaskBtn {
+    border-style:none;
+    height:auto;
+    width: auto;
+    background: none;
+    font-size: 35px;
+    color:rgb(96, 96, 234)
+}
+#addtaskBtn:hover {
+    cursor:pointer;
+    color:blue;
+}
+.taskCard {
+    visibility: hidden;
+    margin-top: 30px;
+    border-radius: 10px;
+    height: auto;
+    width: 400px;
+    border-radius: 10px;
+    background: hsla(0, 0%, 100%, 0.8);
+}
+.deletedCard {
+    visibility: hidden;
+    text-decoration: line-through;
+    margin-top: 30px;
+    border-radius: 10px;
+    height: auto;
+    width: 400px;
+    border-radius: 10px;
+    background: hsla(0, 0%, 100%, 0.8);
+}
+.doneCard {
+    visibility: hidden;
+    margin-top: 30px;
+    border-radius: 10px;
+    height: auto;
+    width: 400px;
+    border-radius: 10px;
+    background: hsla(0, 0%, 100%, 0.8);
+}
+footer {
+    margin-top: 150px;
+}
+#taskRow {
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap:8px;
+}
+.edit {
+    grid-column-start: 4;
+    font-size: 20px;
+    background: none;
+    border-style: none;
+}
+.done {
+    grid-column-start: 5;
+    font-size: 20px;
+    background: none;
+    border-style: none;
+}
+.delete {
+    grid-column-start: 6;
+    font-size: 20px;
+    background: none;
+    border-style: none;
+}
+.delete:hover {
+    cursor: pointer;
+    color: red;
+}
+.done:hover {
+    cursor:pointer;
+    color:rgb(40, 235, 40);
+}
+.edit:hover{
+    cursor:pointer;
+    color:rgb(255, 184, 51);
+}
+#warningMessage {
+    display: none;
+    color:red;
+}
