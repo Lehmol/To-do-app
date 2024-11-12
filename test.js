@@ -3,7 +3,6 @@ const taskContainer = document.getElementById("taskContainer");
 const deletedContainer = document.getElementById("deletedContainer");
 const doneContainer = document.getElementById("doneContainer");
 const warningTxt = document.getElementById("warningMessage");
-const doneCard = document.getElementsByClassName("doneCard");
 
 function addTask() {
     const task = inputBox.value.trim();
@@ -39,6 +38,10 @@ function addTask() {
         doneContainer.appendChild(li);
         completeBtn.style.display = "none";
 
+        const doneCard = document.getElementsByClassName("doneCard");
+        for(let i = 0; i < doneCard.length; i++) {
+            doneCard[i].style.display = "block";
+        }
     })
 
     deleteBtn.addEventListener("click", function() {
@@ -46,5 +49,10 @@ function addTask() {
         deleteBtn.style.display = "none";
         editBtn.style.display ="none";
         completeBtn.style.display ="none";
+
+        const delCard = document.getElementsByClassName("deletedCard");
+        for(let i = 0; i < delCard.length; i++) {
+            delCard[i].style.display = "block";
+        }
     })
 }

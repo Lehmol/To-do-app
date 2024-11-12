@@ -39,7 +39,6 @@ body{
     color:blue;
 }
 .taskCard {
-    /*visibility: hidden;*/
     margin-top: 30px;
     border-radius: 10px;
     height: auto;
@@ -48,22 +47,27 @@ body{
     background: hsla(0, 0%, 100%, 0.8);
 }
 .deletedCard {
-    /*visibility: hidden;*/
-    text-decoration: line-through;
+    display: none;
     margin-top: 30px;
     border-radius: 10px;
     height: auto;
     width: 400px;
     border-radius: 10px;
     background: hsla(0, 0%, 100%, 0.8);
+    text-align: center;
+}
+#deletedContainer {
+    text-decoration: line-through;
 }
 .doneCard {
+    display: none;
     margin-top: 30px;
     border-radius: 10px;
     height: auto;
     width: 400px;
     border-radius: 10px;
     background: hsla(0, 0%, 100%, 0.8);
+    text-align: center;
 }
 footer {
     margin-top: 150px;
