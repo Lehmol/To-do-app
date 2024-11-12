@@ -56,8 +56,12 @@ body{
     background: hsla(0, 0%, 100%, 0.8);
     text-align: center;
 }
+#doneContainer {
+    color:rgb(39, 204, 39);
+}
 #deletedContainer {
     text-decoration: line-through;
+    color: red;
 }
 .doneCard {
     display: none;
