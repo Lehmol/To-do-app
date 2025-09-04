@@ -1,125 +1,123 @@
-body{
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-    background: rgb(238,174,202);
-    background: -moz-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(83,141,210,1) 100%);
-    background: -webkit-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(83,141,210,1) 100%);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(83,141,210,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#538dd2",GradientType=1);
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(238, 174, 202);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(83, 141, 210, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(83, 141, 210, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(83, 141, 210, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#538dd2",GradientType=1);
 }
 .inputCard {
-    background: hsla(0, 0%, 100%, 0.8);
-    height: 80px;
-    width: 400px;
-    display:flex;
-    justify-content: space-around;
-    border-radius: 10px;
+  background: hsla(0, 0%, 100%, 0.8);
+  height: 80px;
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
 }
 #taskInput {
-    border-style: none;
-    height:auto;
-    width: auto;
-    background: none;
-    font-size: 20px;
+  border-style: none;
+  height: auto;
+  width: auto;
+  background: none;
+  font-size: 20px;
 }
 #taskInput:focus {
-    outline:none;
+  outline: none;
 }
 #addtaskBtn {
-    border-style:none;
-    height:auto;
-    width: auto;
-    background: none;
-    font-size: 35px;
-    color:rgb(96, 96, 234)
+  border-style: none;
+  height: auto;
+  width: auto;
+  background: none;
+  font-size: 35px;
+  color: rgb(96, 96, 234);
 }
 #addtaskBtn:hover {
-    cursor:pointer;
-    color:blue;
+  cursor: pointer;
+  color: blue;
 }
 .taskCard {
-    margin-top: 30px;
-    border-radius: 10px;
-    height: auto;
-    width: 400px;
-    border-radius: 10px;
-    background: hsla(0, 0%, 100%, 0.8);
+  visibility: hidden;
+  margin-top: 30px;
+  border-radius: 10px;
+  height: auto;
+  width: 400px;
+  border-radius: 10px;
+  background: hsla(0, 0%, 100%, 0.8);
 }
 .deletedCard {
-    display: none;
-    margin-top: 30px;
-    border-radius: 10px;
-    height: auto;
-    width: 400px;
-    border-radius: 10px;
-    background: hsla(0, 0%, 100%, 0.8);
-    text-align: center;
-}
-#doneContainer {
-    color:rgb(39, 204, 39);
-}
-#deletedContainer {
-    text-decoration: line-through;
-    color: red;
+  visibility: hidden;
+  text-decoration: line-through;
+  margin-top: 30px;
+  border-radius: 10px;
+  height: auto;
+  width: 400px;
+  border-radius: 10px;
+  background: hsla(0, 0%, 100%, 0.8);
 }
 .doneCard {
-    display: none;
-    margin-top: 30px;
-    border-radius: 10px;
-    height: auto;
-    width: 400px;
-    border-radius: 10px;
-    background: hsla(0, 0%, 100%, 0.8);
-    text-align: center;
+  visibility: hidden;
+  margin-top: 30px;
+  border-radius: 10px;
+  height: auto;
+  width: 400px;
+  border-radius: 10px;
+  background: hsla(0, 0%, 100%, 0.8);
 }
 footer {
-    margin-top: 150px;
-}
-.edit-btn {
-    margin-left: 20px;
-    font-size: 20px;
-    background: none;
-    border-style: none;
-}
-.complete-btn {
-    margin-left: 20px;
-    font-size: 20px;
-    background: none;
-    border-style: none;
-}
-.delete-btn {
-    margin-left: 20px;
-    font-size: 20px;
-    background: none;
-    border-style: none;
-}
-.delete-btn:hover {
-    cursor: pointer;
-    color: red;
-}
-.complete-btn:hover {
-    cursor:pointer;
-    color:rgb(40, 235, 40);
-}
-.edit-btn:hover{
-    cursor:pointer;
-    color:rgb(255, 184, 51);
-}
-#warningMessage {
-    display: none;
-    color:red;
+  margin-top: 150px;
 }
 #taskRow {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 8px;
 }
-#taskRow p {
-    margin-left: 20px;
-    flex: 1;
+.edit {
+  grid-column-start: 4;
+  font-size: 20px;
+  background: none;
+  border-style: none;
 }
-li {
-    list-style-type: none;
+.done {
+  grid-column-start: 5;
+  font-size: 20px;
+  background: none;
+  border-style: none;
+}
+.delete {
+  grid-column-start: 6;
+  font-size: 20px;
+  background: none;
+  border-style: none;
+}
+.delete:hover {
+  cursor: pointer;
+  color: red;
+}
+.done:hover {
+  cursor: pointer;
+  color: rgb(40, 235, 40);
+}
+.edit:hover {
+  cursor: pointer;
+  color: rgb(255, 184, 51);
+}
+#warningMessage {
+  display: none;
+  color: red;
 }

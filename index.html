@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>To-do Application</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>To-do List</h1>
-    <div id="warningMessage"style="display:none;">PLEASE ENTER A TASK</div>
+    <div id="warningMessage" style="display: none">PLEASE ENTER A TASK</div>
     <div class="inputCard">
-        <input type="text" id="taskInput" class="input-item" placeholder="Write a task">
-        <button type="button" onclick="addTask()" id="addtaskBtn">
-            <i class="fa-solid fa-circle-plus"></i>
-        </button>
+      <input
+        type="text"
+        id="taskInput"
+        class="input-item"
+        placeholder="Write a task"
+      />
+      <button type="button" onclick="addTask()" id="addtaskBtn">
+        <i class="fa-solid fa-circle-plus"></i>
+      </button>
     </div>
     <div class="taskCard">
-        <div id="taskContainer"></div>
+      <div id="taskContainer"></div>
     </div>
-    <div class="doneCard">Completed tasks
-        <div id="doneContainer"></div>
+    <div class="doneCard">
+      Completed tasks
+      <div id="doneContainer"></div>
     </div>
-    <div class="deletedCard">Deleted tasks
-        <div id="deletedContainer"></div>
+    <div class="deletedCard">
+      Deleted tasks
+      <div id="deletedContainer"></div>
     </div>
     <footer>To-do Application made by Linnéa Lehmann Molander</footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
