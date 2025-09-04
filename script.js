@@ -29,11 +29,30 @@ function addTask() {
     const completeBtn = li.querySelector(".complete-btn");
 
     editBtn.addEventListener("click", function () {
-        const update = prompt("Edit task:", taskParagraph.textContent);
-        if(update !== null) {
-            taskParagraph.textContent = update;
+        const input = document.createElement("input");
+        input.type = "text";
+        input.value = taskParagraph.textContent;
+
+        taskParagraph.replaceWith(input);
+        input.focus();
+
+        editBtn.innerHTML = `<i class="fa-regular fa-square-check"></i>`;
+
+        function saveEdit() {
+            taskParagraph.textContent = input.value;
+            input.replaceWith(taskParagraph);
+            editBtn.innerHTML = `<i class="fa-regular fa-pen-to-square"></i>`;
         }
+        input.addEventListener("blur", saveEdit);
+
+        input.addEventListener("keypress", function(event) {
+            if(event.key === "Enter") {
+                saveEdit();
+            }
+        })
     })
+
+    
     completeBtn.addEventListener("click", function() {
         doneContainer.appendChild(li);
         completeBtn.style.display = "none";
