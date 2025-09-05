@@ -4,41 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>To-do Application</title>
+    <title>To-do app</title>
   </head>
   <body>
-    <h1>To-do List</h1>
-    <div id="warningMessage" style="display: none">PLEASE ENTER A TASK</div>
-    <div class="inputCard">
+    <main id="content-area">
+      <h1>Notes & tasks</h1>
+      <div id="items-container"></div>
+      <div id="completed-section" class="hidden">
+        <h2>All done</h2>
+        <div id="completed-container"></div>
+      </div>
+    </main>
+    <div id="filter-container">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="notes">Notes</button>
+      <button class="filter-btn" data-filter="tasks">Tasks</button>
+    </div>
+    <div id="add-item-container">
       <input
         type="text"
-        id="taskInput"
-        class="input-item"
-        placeholder="Write a task"
+        id="new-item-input"
+        placeholder="Write a note or a task..."
       />
-      <button type="button" onclick="addTask()" id="addtaskBtn">
-        <i class="fa-solid fa-circle-plus"></i>
-      </button>
+      <button id="add-note-btn">Add note</button>
+      <button id="add-task-btn">Add task</button>
     </div>
-    <div class="taskCard">
-      <div id="taskContainer"></div>
-    </div>
-    <div class="doneCard">
-      Completed tasks
-      <div id="doneContainer"></div>
-    </div>
-    <div class="deletedCard">
-      Deleted tasks
-      <div id="deletedContainer"></div>
-    </div>
-    <footer>To-do Application made by Linnéa Lehmann Molander</footer>
-    <script src="script.js"></script>
   </body>
+  <script src="script.js"></script>
 </html>
