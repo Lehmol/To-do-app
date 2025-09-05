@@ -5,6 +5,7 @@ body {
   padding: 20px;
   background: #3d654f;
   color: #e8f5e8;
+  padding-bottom: 120px;
 }
 
 #content-area {
@@ -134,7 +135,12 @@ h1 {
   box-shadow: 6px 6px 12px #475b43, -6px -6px 12px #5f6f51;
 }
 #add-item-container {
-  margin-top: 30px;
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
   background: #436c55;
   border-radius: 15px;
